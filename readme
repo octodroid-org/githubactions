@@ -1,1 +1,8 @@
-github actions
+patching your actions and workflows
+if you are using self-hosted runners make sure they are updated to version 2.273.1 or greater.
+
+action authors who are using the toolkit should update the @actions/core package to v1.2.6 or greater to get the updated addPath and exportVariable functions.
+
+action and workflow authors who are setting environment variables via STDOUT should update any usage of the set-env and add-path workflow commands to use the new environment files.
+
+if you need to log untrusted information such as issue titles, bodies, or commit messages to STDOUT we recommend that you disable command processing prior to doing that.
