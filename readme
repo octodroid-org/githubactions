@@ -6,3 +6,7 @@ action authors who are using the toolkit should update the @actions/core package
 action and workflow authors who are setting environment variables via STDOUT should update any usage of the set-env and add-path workflow commands to use the new environment files.
 
 if you need to log untrusted information such as issue titles, bodies, or commit messages to STDOUT we recommend that you disable command processing prior to doing that.
+
+for other languages you need to generate a suitably random token that changes with each run.
+
+starting today runner version 2.273.5 will begin to warn you if you use the add-path or set-env commands. We are monitoring telemetry for the usage of these commands and plan to fully disable them in the future.
